@@ -1,13 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import MainLayout from "@/components/layout/MainLayout";
+import Hero from "@/components/home/Hero";
+import ContentRow from "@/components/content/ContentRow";
+import { 
+  featuredContent, 
+  moviesContent, 
+  seriesContent 
+} from "@/data/content";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <MainLayout>
+      <Hero />
+      <div className="space-y-8 mt-4">
+        <ContentRow title="Tendances maintenant" content={featuredContent} />
+        <ContentRow title="Films populaires" content={moviesContent} />
+        <ContentRow title="Séries à ne pas manquer" content={seriesContent} />
       </div>
-    </div>
+    </MainLayout>
   );
 };
 
