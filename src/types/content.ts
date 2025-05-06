@@ -1,5 +1,5 @@
 
-export type ContentType = "movie" | "series";
+export type ContentType = "movie" | "series" | "sport" | "amazon" | "canal" | "crunchyroll" | "manga";
 
 export interface Content {
   id: string;
