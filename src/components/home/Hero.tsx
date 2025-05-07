@@ -9,8 +9,8 @@ const Hero = () => {
       {/* Hero Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background">
         <img
-          src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1920"
-          alt="Hero Background"
+          src="https://m.media-amazon.com/images/M/MV5BMGJkNDJlZWUtOGM1Ny00YjNkLThiM2QtY2ZjMzQxMTIxNWNmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+          alt="Hero Background - Matrix Resurrections"
           className="w-full h-full object-cover object-center opacity-70"
         />
       </div>
@@ -32,7 +32,7 @@ const Hero = () => {
             <Button className="flex items-center gap-2">
               <Play className="h-5 w-5" /> Lecture
             </Button>
-            <Link to="/films/matrix">
+            <Link to="/films/matrix-resurrections">
               <Button variant="outline">Plus d'infos</Button>
             </Link>
           </div>

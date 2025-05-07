@@ -27,6 +27,13 @@ const ContentRow = ({ title, content, className }: ContentRowProps) => {
                 src={item.imageUrl}
                 alt={item.title}
                 className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-50"
+                onError={(e) => {
+                  // Fallback for broken images
+                  const target = e.target as HTMLImageElement;
+                  console.log(`Failed to load image: ${target.src}`);
+                  target.onerror = null;
+                  target.src = "https://via.placeholder.com/300x450?text=Image+Not+Found";
+                }}
               />
               <div className="absolute inset-0 flex flex-col justify-end p-3 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-background/90 to-transparent transition-opacity">
                 <h3 className="font-medium">{item.title}</h3>
