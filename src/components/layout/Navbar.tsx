@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div className="flex items-center space-x-8">
         <Link to="/" className="flex items-center">
-          <h1 className="text-2xl font-bold text-primary">IKEWA</h1>
+          <h1 className="text-2xl font-bold text-primary">IKEWA STREAMING</h1>
         </Link>
         <nav className="hidden md:flex space-x-6">
           <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
