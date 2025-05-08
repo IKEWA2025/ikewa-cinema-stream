@@ -11,7 +11,8 @@ import {
   amazonContent,
   canalContent,
   crunchyrollContent,
-  mangaContent
+  mangaContent,
+  newReleasesContent
 } from "@/data/content";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
     <MainLayout>
       <Hero />
       <div className="space-y-8 mt-4 pb-10">
+        <ContentRow title="Nouveautés" content={newReleasesContent} />
         <ContentRow title="Tendances maintenant" content={featuredContent} />
         <ContentRow title="Nouveautés Sport" content={sportsContent} />
         <ContentRow title="Films populaires" content={moviesContent} />

@@ -8,6 +8,7 @@ import { amazonContent } from "./amazonContent";
 import { canalContent } from "./canalContent";
 import { crunchyrollContent } from "./crunchyrollContent";
 import { mangaContent } from "./mangaContent";
+import { newReleasesContent } from "./newReleasesContent";
 
 // Export all content arrays
 export {
@@ -18,7 +19,8 @@ export {
   amazonContent,
   canalContent,
   crunchyrollContent,
-  mangaContent
+  mangaContent,
+  newReleasesContent
 };
 
 // Combined content array
@@ -30,7 +32,8 @@ export const allContent: Content[] = [
   ...amazonContent,
   ...canalContent,
   ...crunchyrollContent,
-  ...mangaContent
+  ...mangaContent,
+  ...newReleasesContent
 ];
 
 // Categories and genres

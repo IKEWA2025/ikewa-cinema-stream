@@ -1,4 +1,3 @@
-
 import MainLayout from "@/components/layout/MainLayout";
 import ContentRow from "@/components/content/ContentRow";
 import { useState, useEffect } from "react";
@@ -6,6 +5,7 @@ import { Content } from "@/types/content";
 import { allContent } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { Trash2, Grid3X3, List, Filter } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
