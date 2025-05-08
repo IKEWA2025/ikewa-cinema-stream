@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -12,6 +12,7 @@ import {
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,19 +38,44 @@ const Navbar = () => {
           <h1 className="text-2xl font-bold text-primary">IKEWA STREAMING</h1>
         </Link>
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link 
+            to="/" 
+            className={`text-sm font-medium transition-colors ${
+              location.pathname === '/' ? 'text-primary' : 'hover:text-primary'
+            }`}
+          >
             Accueil
           </Link>
-          <Link to="/series" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link 
+            to="/series" 
+            className={`text-sm font-medium transition-colors ${
+              location.pathname === '/series' ? 'text-primary' : 'hover:text-primary'
+            }`}
+          >
             Séries
           </Link>
-          <Link to="/films" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link 
+            to="/films" 
+            className={`text-sm font-medium transition-colors ${
+              location.pathname === '/films' ? 'text-primary' : 'hover:text-primary'
+            }`}
+          >
             Films
           </Link>
-          <Link to="/nouveautes" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link 
+            to="/nouveautes" 
+            className={`text-sm font-medium transition-colors ${
+              location.pathname === '/nouveautes' ? 'text-primary' : 'hover:text-primary'
+            }`}
+          >
             Nouveautés
           </Link>
-          <Link to="/ma-liste" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link 
+            to="/ma-liste" 
+            className={`text-sm font-medium transition-colors ${
+              location.pathname === '/ma-liste' ? 'text-primary' : 'hover:text-primary'
+            }`}
+          >
             Ma Liste
           </Link>
         </nav>
